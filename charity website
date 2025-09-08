@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity:Water Landing Page</title>
+  <style>
+    /* Reset and base styles */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000;
+      background-color: #f5f5f5;
+    }
+
+    /* Header bar */
+    header {
+      background-color: #f9c400; /* bright yellow */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    header .logo span {
+      font-weight: bold;
+    }
+
+    header .donate-btn {
+      background-color: #002b5c; /* dark navy */
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    /* Hero section */
+    .hero {
+      background-color: #f9c400;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border: 4px solid #000;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #002b5c;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      💧 <span>Charity:Water</span>
+    </div>
+    <button class="donate-btn">DONATE NOW</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Fuel the Movement for Water Justice.</h1>
+      <p>💧 Every dollar you give helps fund sustainable clean water projects 
+        empowering real people on the frontlines of climate and humanitarian crises. 💧</p>
+    </div>
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/400x250.png?text=Placeholder+Image" alt="Water project">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Charity:Water — Together we can make clean water accessible for everyone.
+  </footer>
+
+</body>
+</html>
