@@ -11,6 +11,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color: #000;
       background-color: #f5f5f5;
+      min-height: 100vh;
     }
 
     /* Header bar */
@@ -49,11 +50,15 @@
     .hero {
       /* Diagonal background: 70% yellow (top left), 30% blue (bottom right) */
       background: linear-gradient(135deg, #f9c400 0 70%, #003366 70% 100%);
+      width: 100vw;
+      min-height: 60vh;
+      margin-left: calc(-1 * (100vw - 100%) / 2);
       padding: 2rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      box-sizing: border-box;
     }
 
     .hero-text {
