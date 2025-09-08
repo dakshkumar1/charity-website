@@ -47,7 +47,8 @@
 
     /* Hero section */
     .hero {
-      background-color: #f9c400;
+      /* Diagonal background: 70% yellow (top left), 30% blue (bottom right) */
+      background: linear-gradient(135deg, #f9c400 0 70%, #003366 70% 100%);
       padding: 2rem;
       display: flex;
       flex-wrap: wrap;
@@ -68,6 +69,7 @@
     .hero-text p {
       font-size: 1.1rem;
       line-height: 1.5;
+      font-family: 'Avenir', Arial, Helvetica, sans-serif;
     }
 
     .hero-image img {
@@ -91,7 +93,8 @@
   <!-- Header -->
   <header>
     <div class="logo">
-      💧 <span>Charity:Water</span>
+      <img src="jerry_can_black.png" alt="Jerry Can Logo" style="height: 1.5em; vertical-align: middle;">
+      <span>Charity:Water</span>
     </div>
     <button class="donate-btn">DONATE NOW</button>
   </header>
@@ -100,11 +103,13 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Fuel the Movement for Water Justice.</h1>
-      <p>💧 Every dollar you give helps fund sustainable clean water projects 
-        empowering real people on the frontlines of climate and humanitarian crises. 💧</p>
+      <p>
+        💧 Every dollar you give helps fund sustainable clean water projects 
+        empowering real people on the frontlines of climate and humanitarian crises. 💧
+      </p>
     </div>
     <div class="hero-image">
-      <img src="https://via.placeholder.com/400x250.png?text=Placeholder+Image" alt="Water project">
+      <img src="water.jpeg" alt="Water project">
     </div>
   </section>
 
