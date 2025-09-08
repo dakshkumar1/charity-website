@@ -5,12 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charity:Water Landing Page</title>
   <style>
-    /* Reset and base styles */
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
+      padding: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #000;
       background-color: #f5f5f5;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
       min-height: 100vh;
     }
 
@@ -21,6 +29,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-shrink: 0;
     }
 
     header .logo {
@@ -44,6 +53,14 @@
       cursor: pointer;
       font-size: 1rem;
       font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    header .donate-btn:hover,
+    header .donate-btn:focus {
+      background: #00509e;
+      transform: scale(1.05);
+      outline: none;
     }
 
     /* Hero section */
@@ -51,14 +68,14 @@
       /* Diagonal background: 70% yellow (top left), 30% blue (bottom right) */
       background: linear-gradient(135deg, #f9c400 0 70%, #003366 70% 100%);
       width: 100vw;
-      min-height: 60vh;
-      margin-left: calc(-1 * (100vw - 100%) / 2);
-      padding: 2rem;
+      min-height: 0;
+      flex: 1 0 auto;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       box-sizing: border-box;
+      padding: 4vw 8vw;
     }
 
     .hero-text {
@@ -67,20 +84,33 @@
     }
 
     .hero-text h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
     .hero-text p {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       line-height: 1.5;
       font-family: 'Avenir', Arial, Helvetica, sans-serif;
     }
 
+    .hero-image {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 250px;
+      max-width: 600px;
+    }
+
     .hero-image img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 500px;
       border: 4px solid #000;
       border-radius: 4px;
+      height: auto;
+      display: block;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     }
 
     /* Footer */
@@ -90,6 +120,41 @@
       background-color: #002b5c;
       color: #fff;
       font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1100px) {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 4vw 4vw;
+      }
+      .hero-image {
+        width: 100%;
+        margin-top: 2rem;
+        max-width: 100%;
+      }
+      .hero-image img {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+      .hero {
+        padding: 2vw 2vw;
+      }
+      .hero-text h1 {
+        font-size: 1.5rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
